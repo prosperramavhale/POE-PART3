@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS cybersafe_companion;
+USE cybersafe_companion;
+
+CREATE TABLE IF NOT EXISTS CyberTasks (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Title VARCHAR(150) NOT NULL,
+    Description VARCHAR(700) NOT NULL,
+    ReminderDate DATETIME NULL,
+    IsCompleted BIT NOT NULL DEFAULT 0,
+    CreatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
